@@ -1,0 +1,279 @@
+@BECanlendar_box_className : .BECanlendar;
+@resultWidth : 300px;
+@height : 26px;
+@chooseBox : 500px;
+@bordercolor : #9e9e9e;
+
+@{BECanlendar_box_className}{
+	margin :10px;
+	width  :@resultWidth;
+	position: relative;
+	font-family: "微软雅黑";
+
+	.result{
+		width:@resultWidth;
+		height:@height ;
+		border: 1px solid @bordercolor;
+		border-radius: 4px;
+		text-align: left;
+		line-height: @height ;
+		font-size: 14px;
+		padding-left: 10px;
+		box-sizing:border-box;
+		position: relative;
+		cursor: pointer;
+		font-size: 14px;
+	}
+	.result span.canlendarbtn{
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    width: 40px;
+	    height: @height - 2px;
+	    border-left: 1px solid @bordercolor;
+
+	    &::before{
+			position: absolute;
+	        top: 5px;
+		    left: 11px;
+		    font-size: 16px;
+		    color: #424242;
+		}
+	}
+
+	.chooseBox{
+		width:@chooseBox;
+		background-color:white;
+		 
+		border: 1px solid @bordercolor;
+		position: absolute;
+		top: 38px;
+		left:0;
+		border-radius: 4px;
+		padding:4px 8px;
+	 
+		z-index:1000;
+		box-sizing: border-box;
+		padding-top: 40px;
+
+		.submitbtn{
+			position: absolute;
+			top: 4px;
+			left:4px;
+		}
+
+		.cancelbtn{
+			position: absolute;
+			top: 4px;
+			left: 60px;
+		}
+
+
+		.begin{
+			float: left;
+			width:40%;
+			position: relative;
+		}
+
+		.end{
+			float: left;
+			width:40%;
+			position: relative;
+		}
+
+		.days{
+			float: left;
+			width:20%;
+			text-align: center;
+			line-height: 50px;
+		    font-size: 18px;
+		    color: orange;
+
+		}
+		
+		@smallResultW : 190px;
+		@smallResultH : 24px;
+		.result{
+		    width: @smallResultW;
+    		height: @smallResultH;
+
+    		span.canlendarbtn{
+    			width:34px;
+    			font-size: 16px;
+    			height:@smallResultH - 2px;
+
+				&::before{
+					position: absolute;
+				    top: 5px;
+				    left: 9px;
+				    font-size: 14px;
+				    color: #424242;
+				}
+    		}
+		}
+	}
+}
+
+
+@canlendarClassName : .canlendarChooser;
+
+@{canlendarClassName}{
+    position: absolute;
+    top: 41px;
+    left: 0px;
+    width: 265px;
+    height: 240px;
+    border: 1px solid #BDBDBD;
+    background: white;
+   
+    padding: 10px;
+
+
+    h4{
+    	text-align: center;
+    	font-size: 16px;
+    	font-weight: bold;
+    }
+
+    .leftBtn{
+    	position: absolute;
+		left: 11px;
+    	top: 22px;
+		width:16px;
+		height:16px;
+		background-image: url(../images/ll.png);
+		background-size: contain;
+    }
+
+    .rightBtn{
+    	position: absolute;
+		right: 11px;
+    	top: 22px;
+		width:16px;
+		height:16px;
+		background-image: url(../images/rr.png);
+		background-size: contain;
+    }
+
+    th{
+    	text-align: center;
+    }
+
+    td{
+	    padding: 0px 10px;
+	    width: 14px;
+	    height: 16px;
+	    font-size: 12px;
+	    text-align:center;
+	    position: relative;
+
+        &.gray{
+    		color:#BDBDBD;
+	    }
+	    &.cur{
+	   		background-color:#4FC3F7;
+	    }
+	    &:hover{
+	    	background-color: lightblue;
+	    }
+    }
+  
+
+    .YearMonthPicker{
+    	position: absolute;
+    	width:100%;
+    	height:100%;
+     	background-color: rgba(0,0,0,.6);
+     	top: 0;
+     	left:0;
+     	z-index: 1000;
+
+
+     	.inner{
+     		position: absolute;
+     		width:230px;
+     		height:200px;
+     		top: 50%;
+     		left:50%;
+     		transform:translate(-50%,-50%);
+     		background-color: white;
+     		padding: 10px;
+     		box-sizing:border-box;
+
+
+     		.year_panel{
+     			width:100%;
+     			padding: 0 10px;
+
+     			.panel_inner{
+     				overflow: hidden;
+     				width:100%;
+
+     				.span_container{
+						position: relative;
+	 
+						width:1000px;
+	     				span{
+		     				float: left;
+		     				width:38px;	
+		     				border: 1px solid #E0E0E0;
+
+		     				&.cur{
+		     					font-weight: bold;
+		     				}
+		     			}
+     				}
+     			}
+
+     			
+
+	     			
+
+
+     			.ll{
+     				position: absolute;
+     				left: 1px;
+					top: 14px;
+     				width:16px;
+     				height:16px;
+     				background-image: url(../images/ll.png);
+     				background-size: contain;
+     			}
+
+     			.rr{
+     				position: absolute;
+     				right: 1px;
+					top: 14px;
+     				width:16px;
+     				height:16px;
+     				background-image: url(../images/rr.png);
+     				background-size: contain;
+     			}
+     		}
+
+     		.month_panel{
+     			width:100%;
+	
+
+				.col{
+					float: left;
+					width:50%;
+
+					a{
+						display: block;
+						text-align: center;
+
+
+					}
+
+					.cur{
+						border: 1px solid orange;
+						background-color: gold;
+					}
+				} 
+     		}
+     	}
+    }
+}
+
+

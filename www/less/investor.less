@@ -1,0 +1,62 @@
+.filterbar{
+	margin-top:20px;
+	a{
+		margin-right: 20px;
+		padding: 4px 6px;
+	}
+	a.cur{
+		border: 1px solid orange;
+	}
+
+	.mutibtn{
+		border:1px solid #333;
+	}
+
+	label{
+ 		
+		margin-right:20px;
+	}
+	.radio ,.checkbox{
+		margin-top:0;
+	}
+}
+.filter_t{
+	line-height: 50px;
+}
+
+.nowfilter {
+	overflow: hidden;
+	ul{
+		list-style:none;
+		overflow: hidden;
+		padding-left: 0;
+
+		li{
+			float: left;
+			padding: 4px 10px;
+			border: 1px solid red;
+			margin-right: 10px;
+			padding-right: 24px;
+			position: relative;
+			cursor: pointer;
+
+			&.t{
+				border: none;
+			}
+			&::after{
+				content:"×";
+				position: absolute;
+				width:16px;
+				height:16px;
+				right:0;
+				top: 4px;
+				font-size: 18px;
+				line-height: 20px;
+			}
+			&.t::after{
+				content:none;
+			}
+
+		}
+	}
+}

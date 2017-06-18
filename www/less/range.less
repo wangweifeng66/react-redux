@@ -1,0 +1,86 @@
+
+@pd : 20px;
+.range{
+	padding : @pd;
+	padding-bottom: 20px;
+	position : relative;
+	box-sizing:content-box;
+
+	.btn{
+		position: absolute;
+		right:-100px;
+		top: 20px;
+	}
+
+	.bar{
+		height: 16px;
+		background-color: #9e9e9e;
+		border-radius: 4px;
+		position: relative;
+		left:-3px;
+
+		b{
+			position: absolute;
+			top:-2px;
+			left:100px;
+			height:20px;
+			width:10px;
+			background-color: darkred;
+			z-index: 1000;
+			cursor: pointer;
+
+			u{
+				font-style: normal;
+				font-size: 12px;
+				position: absolute;
+				width:20px;
+				height:10px;
+				text-align: center;
+				left:-10px;
+				top: -14px;
+				text-decoration: none;
+			}
+		}
+
+		span{
+			position: absolute;
+			height:16px;
+			background: #03A9F4;
+		}
+	}
+
+	.scaleline{
+		position: absolute;
+		bottom: 0;
+		left:0;
+		width:100%;
+		height:18px;
+		padding: 0 @pd;
+		box-sizing:border-box;
+
+		i{
+			float: left;
+			width:1px;
+			height:8px;
+			background-color: orange;
+		}
+		i.big{
+			height:14px;
+			position: relative;
+
+			u{
+				font-style: normal;
+				font-size: 12px;
+				position: absolute;
+				width:20px;
+				height:10px;
+				text-align: center;
+				left:-10px;
+				top: 14px;
+				text-decoration: none;
+			}
+		}
+	}
+	 
+
+}
