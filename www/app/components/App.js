@@ -14,6 +14,17 @@ let testactive = (hash)=>{
 	return "";
 }
 
+_onChangeVerificationEvent = (sender,obj) => {
+    return {
+      state:true,
+      message:'1123123123'
+    }
+
+_onChangeVerificationEvent = (sender,obj) => {
+    return {
+      state:true,
+      message:'1123123123'
+   }
 export default () => {
 	return (
 		<section>
@@ -27,7 +38,7 @@ export default () => {
 			        <span className="icon-bar"></span>
 			        <span className="icon-bar"></span>
 			      </button>
-			      <a className="navbar-brand" href="#">爱金融P2P金融平台</a>
+			      <a className="navbar-brand" href="#">React-redux</a>
 			    </div>
 
 			 
@@ -37,7 +48,7 @@ export default () => {
 					<li className={testactive("invest")}><Link to="/invest">投资<span className="sr-only"></span></Link></li>
 			      </ul>
 			      <ul className="nav navbar-nav navbar-right">
-			        <li><a>欢迎你，小考拉，你已经成功登录</a></li>
+			        <li><a>欢迎你,你已经成功登录</a></li>
 			      </ul>
 			    </div> 
 			  </div> 
